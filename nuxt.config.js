@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'NagayamaHP',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'jaJP'
     },
     meta: [
       { charset: 'utf-8' },
