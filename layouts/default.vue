@@ -1,48 +1,37 @@
 <template>
   <div>
-    <nav
-      class="navbar header has-shadow is-primary"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand">
-        <a
-          class="navbar-item"
-          href="/"
-        >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
-        </a>
-
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
-        </div>
-      </div>
-    </nav>
 
     <section class="main-content columns">
       <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">
-          General
-        </p>
-        <ul class="menu-list">
-          <li
-            v-for="(item, key) of items"
-            :key="key"
-          >
-            <NuxtLink
-              :to="item.to"
-              exact-active-class="is-active"
-            >
-              <b-icon :icon="item.icon" /> {{ item.title }}
-            </NuxtLink>
-          </li>
-        </ul>
+        <b-sidebar
+          type="is-success"
+          :overlay="overlay"
+          :right="right"
+          v-model="open"
+          position="fixed"
+          :fullheight="fullheight"
+        >
+          <b-menu>
+            <b-menu-list>
+              <b-menu-item
+                icon="arrow-left-top-bold"
+                label="トップページ"
+              />
+              <b-menu-item
+                icon="text-account"
+                label="略歴"
+              />
+              <b-menu-item
+                icon="information-outline"
+                label="ブログ"
+              />
+              <b-menu-item
+                icon="form-select"
+                label="問い合わせフォーム"
+              />
+            </b-menu-list>
+          </b-menu>
+        </b-sidebar>
       </aside>
 
       <div class="container column is-10">
@@ -54,22 +43,13 @@
 
 <script>
 export default {
-  name: 'DefaultLayout',
-  data () {
+  data() {
     return {
-      items: [
-        {
-          title: 'Home',
-          icon: 'home',
-          to: { name: 'index' }
-        },
-        {
-          title: 'Inspire',
-          icon: 'lightbulb',
-          to: { name: 'inspire' }
-        }
-      ]
-    }
-  }
-}
+      fullheight: true,
+      overlay: false,
+      right: false,
+      open: true,
+    };
+  },
+};
 </script>
