@@ -1,3 +1,4 @@
 <template>
-  <h1>テスト</h1>
+  <div class="main-title">
+  </div>
 </template>
