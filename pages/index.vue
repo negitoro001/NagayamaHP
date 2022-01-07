@@ -5,7 +5,7 @@
       Artist
     </div>
     <div class="name-class">
-      Taichi Nagayama
+      Taichi Nagayama,
       in Japan
     </div>
   </section>
