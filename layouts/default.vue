@@ -34,7 +34,9 @@
       </b-sidebar>
 
     </section>
-    <Nuxt />
+    <div class="p-1">
+      <Nuxt />
+    </div>
   </div>
 </template>
 
