@@ -1,10 +1,10 @@
 <template>
   <b-sidebar
     type="is-light"
-    :overlay="overlay"
     :right="right"
     :fullheight="fullheight"
     v-model="activeModel"
+    open
   >
     <b-menu>
       <b-menu-list>
@@ -36,8 +36,7 @@ export default {
     return {
       activeModel: "",
       fullheight: true,
-      overlay: false,
-      right: false
+      right: false,
     };
   },
 };

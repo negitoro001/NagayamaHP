@@ -1,5 +1,16 @@
-.p-1 {
-  padding: 1em;
+.main {
+  padding-left: 20%;
+}
+.sidebar-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  .sidebar-layout {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+  }
 }
 
 .main-title {

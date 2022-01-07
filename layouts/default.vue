@@ -1,14 +1,8 @@
 <template>
-  <div
-    id="app"
-    class="container"
-  >
-    <section>
-      <CommonSideBar />
-    </section>
-
-    <div class="p-1">
+  <section>
+    <CommonSideBar />
+    <div class="main">
       <Nuxt />
     </div>
-  </div>
+  </section>
 </template>
